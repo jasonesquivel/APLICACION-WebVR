@@ -4,26 +4,41 @@
     <meta charset="utf-8">
     <title>Imagen con Información</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-simple-sun-sky@^1.2.3/simple-sun-sky.js"></script>
     <script src="hoverable.js"></script>
-    <link rel="stylesheet" href="style.css"
+    <link rel="stylesheet" href="css/style.css"
     info-message="htmlSrc: #messageText">
   </head>
   <body>
-    <a-scene background="color: #212"
+    <a-scene  
     environment
     cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable">
         
       <a-assets>
-        <img id="mi-imagen1" src="imagen1.jpg">
-        <img id="mi-imagen2" src="imagen2.jpeg">
-        <img id="mi-imagen3" src="imagen3.jpg">
+        <img id="floor" src="assets/floor.jpg">
+        <img id="mi-imagen1" src="assets/imagen1.jpg">
+        <img id="mi-imagen2" src="assets/imagen2.jpeg">
+        <img id="mi-imagen3" src="assets/imagen3.jpg">
       </a-assets>
-      <a-image id="imagen1" src="#mi-imagen1" position="-5 1.6 -5" width="4" height="2" depth="0.1" cursor="rayOrigin: mouse" data-message="
-      Graduation de Kanye West es un álbum de hip-hop innovador con un sonido futurista y optimista. Destacan temas como Stronger y Good Life, y colaboraciones con T-Pain y Chris Martin de Coldplay. Es una obra maestra que ha resistido el paso del tiempo."></a-image>
 
-      <a-image id="imagen2" src="#mi-imagen2" position="0 1.6 -5" width="4" height="2" depth="0.1" cursor="rayOrigin: mouse" data-message="Morale & The Big Steppers responde: con la idea bien asentada de que no existen los súper héroes ni las fuerzas inmaculadas… Existen los seres humanos, que cometen errores y dan pasos en falso durante la búsqueda de sentido y congruencia para nuestra estadía en el mundo."></a-image>
+      <a-simple-sun-sky sun-position="0.7 0.4 -1"></a-simple-sun-sky>
+<!--Suelo-->
+<a-plane material="color: #FFFFFF;
+                   src: #floor;
+                  repeat:5 5;
+                  normal-map: #floor-NRM;
+                  normal-texture-repeat: 5 5 "
+                  rotation="-90 0 0"
+                  scale="10 10 1"></a-plane>
+<!--finsuelo-->
+
+      <a-image id="imagen1" class="border" src="#mi-imagen1" data-src="imagen1.jpg" position="-5 1.6 -5" width="4" height="2" depth="0.1" cursor="rayOrigin: mouse" data-message="
+      Graduation de Kanye West es un álbum de hip-hop innovador con un sonido futurista y optimista. Destacan temas como Stronger y Good Life, y colaboraciones con T-Pain y Chris Martin de Coldplay. Es una obra maestra que ha resistido el paso del tiempo." data-image="assets/imagen4.png"></a-image>
+
+
+      <a-image id="imagen2" class="border" src="#mi-imagen2"  data-src="imagen2.jpeg" position="0 1.6 -5" width="4" height="2" depth="0.1" cursor="rayOrigin: mouse" data-message="Morale & The Big Steppers responde: con la idea bien asentada de que no existen los súper héroes ni las fuerzas inmaculadas… Existen los seres humanos, que cometen errores y dan pasos en falso durante la búsqueda de sentido y congruencia para nuestra estadía en el mundo."data-image="assets/imagen5.jpg"></a-image>
       
-      <a-image id="imagen3" src="#mi-imagen3" position="5 1.6 -5" width="4" height="2" depth="0.1" cursor="rayOrigin: mouse" data-message="GO:OD AM es el tercer álbum de estudio del rapero estadounidense Mac Miller, lanzado en 2015. El álbum muestra una evolución musical y lírica de Miller, y aborda temas como la adicción, el amor y la fama. Musicalmente, GO:OD AM combina elementos del hip-hop, el jazz y el soul, y cuenta con colaboraciones de artistas como Miguel y Lil B. El álbum es una muestra del talento y versatilidad de Mac Miller como artista y ha sido aclamado por la crítica musical."></a-image>
+      <a-image id="imagen3" class="border" src="#mi-imagen3"  data-src="imagen3.jpg" position="5 1.6 -5" width="4" height="2" depth="0.1" cursor="rayOrigin: mouse" data-message="GO:OD AM es el tercer álbum de estudio del rapero estadounidense Mac Miller, lanzado en 2015. El álbum muestra una evolución musical y lírica de Miller, y aborda temas como la adicción, el amor y la fama. Musicalmente, GO:OD AM combina elementos del hip-hop, el jazz y el soul. El álbum es una muestra del talento y versatilidad de Mac Miller como artista y ha sido aclamado por la crítica musical."data-image="assets/imagen6.jpg"></a-image>
       
     </a-scene>
 
@@ -33,6 +48,7 @@
 
  
 
-    <script src="script.js"></script>
+    <script src="/js/script.js"></script>
+    
   </body>
 </html>
