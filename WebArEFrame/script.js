@@ -3,7 +3,7 @@ const mensaje = document.querySelector('#mensaje');
 
 imagen1.addEventListener('click', () => {
   const messageText = imagen1.getAttribute('data-message');
-  const messageHtml = `<h2>Información sobre la imagen</h2><p>${messageText}</p>`;
+  const messageHtml = `<h2>Información sobre el album</h2><p>${messageText}</p>`;
   mensaje.innerHTML = messageHtml;
   mensaje.classList.remove('oculto');
 });
@@ -17,7 +17,7 @@ const mensaje2 = document.querySelector('#mensaje');
 
 imagen2.addEventListener('click', () => {
   const messageText = imagen2.getAttribute('data-message');
-  const messageHtml = `<h2>Información sobre la imagen</h2><p>${messageText}</p>`;
+  const messageHtml = `<h2>Información sobre el album</h2><p>${messageText}</p>`;
   mensaje.innerHTML = messageHtml;
   mensaje.classList.remove('oculto');
 });
@@ -31,7 +31,7 @@ const mensaje3 = document.querySelector('#mensaje');
 
 imagen3.addEventListener('click', () => {
   const messageText = imagen3.getAttribute('data-message');
-  const messageHtml = `<h2>Información sobre la imagen</h2><p>${messageText}</p>`;
+  const messageHtml = `<h2>Información sobre el album</h2><p>${messageText}</p>`;
   mensaje.innerHTML = messageHtml;
   mensaje.classList.remove('oculto');
 });
