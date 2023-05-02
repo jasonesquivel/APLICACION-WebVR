@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Imagen con Información</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="hoverable.js"></script>
+    <link rel="stylesheet" href="style.css"
+    info-message="htmlSrc: #messageText">
+  </head>
+  <body>
+    <a-scene background="color: #212"
+    environment
+    cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable">
+        
+      <a-assets>
+        <img id="mi-imagen1" src="imagen1.jpg">
+        <img id="mi-imagen2" src="imagen2.jpeg">
+        <img id="mi-imagen3" src="imagen3.jpg">
+      </a-assets>
+      <a-image id="imagen1" src="#mi-imagen1" position="-5 1.6 -5" width="4" height="2" depth="0.1" cursor="rayOrigin: mouse"></a-image>
+
+      <a-image id="imagen2" src="#mi-imagen2" position="0 1.6 -5" width="4" height="2" depth="0.1" cursor="rayOrigin: mouse"></a-image>
+      
+      <a-image id="imagen3" src="#mi-imagen3" position="5 1.6 -5" width="4" height="2" depth="0.1" cursor="rayOrigin: mouse"></a-image>
+      
+    </a-scene>
+
+    <div id="mensaje" class="oculto">
+      <h2>Información sobre la imagen</h2>
+      <p>Esta imagen muestra un hermoso atardecer en la playa.</p>
+    </div>
+
+ 
+
+    <script src="script.js"></script>
+  </body>
+</html>
